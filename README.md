@@ -18,7 +18,7 @@ Above shows the name of the room peers are connecting to "VR Virtual Tourism" Th
 
 
 ### Networking 
-![Image 5](Capture4.PNG)
+![Image 4](Capture3.PNG)
 There are 3 servers involved in WebRTC connection,
 
 1. **STUN server**: These are lightweight servers which allow clients to find out their public address after NAT. These are provided for free by google shown above in **U Ice Server 2**
