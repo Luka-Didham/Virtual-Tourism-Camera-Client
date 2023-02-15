@@ -15,10 +15,10 @@ The client is recieving/sending a stream through a WebRTC connection. WebRTC is 
 
 Above shows the name of the room peers are connecting to "VR Virtual Tourism" The Demo below is streaming to itself using both its call panels however can just use one to contact another client. There is two connection panels to enable connection within one Unity environment for bug testing however more often will want to only use one connection panel shown below. In the connection panel we can see a preview render of the camera client peer stream. We can also access resolution and FPS information of the stream by clicking on the preview panel. This differs from the FPS on the top left hand side which indicates the FPS the app is running independent of the stream latency.   
 ![Image 3](Capture2.PNG)
-![Image 4](Capture3.PNG)
+
 
 ### Networking 
-![Image 5](Capture4.PNG)
+![Image 4](Capture3.PNG)
 There are 3 servers involved in WebRTC connection,
 
 1. STUN server. These are lightweight servers which allow clients to find out their public address after NAT. These are provided for free by google shown above in **U Ice Server 2**
