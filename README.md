@@ -3,7 +3,7 @@
 ### Project Purpose
 To explore the applications of Virtual Reality Tourism in NZ with the use of peer-to-peer internet connetion protocals and 360 cameras. The system uses live streamed 360 video between Unity Clients using WebRTC. 
 
-### Client Description (Headset)
+### Client Description (Camera)
 The Camera Client is much the same as the Headset Client except the client is connected to a 360 camera and is running standalone on a android phone or windows machine. The client sends both video+audio and recieves audio. The types of data sent across the channel can be toggled shown in the UI below with a built in chat channel.  
 
 ![Image 1](Capture.PNG)
