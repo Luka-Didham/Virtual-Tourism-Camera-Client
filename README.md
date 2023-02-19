@@ -25,6 +25,8 @@ There are 3 servers involved in WebRTC connection,
 2. **TURN server**: (optional). These servers are heavyweight servers relaying the traffic between peers when direct peer-to-peer connection cannot be achieved. these servers ensure connection in all scenarios by acting as a backup. Often I didn't have a TURN server setup as most of the time direct connection was succesful. Direct connection failed in testing (At UoO) when I attempted to go across from Student<->Staff network domains however worked well in other situations including 3G/4G. Above shows the custom COTURN server setup https://github.com/coturn/coturn which doubles as a TURN and STUN server. This was hosted on AWS EC2 (now shutdown). Address shown under **U Ice Server 1**
 3. **Signalling Server (SS)**: This server is responsible for passing the offer/answer/candidate Session Description Protocol (SDP)'s. I had created my own SS with a modified version of https://github.com/bengreenier/node-dss to be compatiable with because-why-not plugin hosted on AWS EC2 but am currently using the because-why-not plugin provided server shown in **U Signalling Url**
 
+### Video Streaming 
+
 
 
 
