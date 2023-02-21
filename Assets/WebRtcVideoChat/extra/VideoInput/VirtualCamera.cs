@@ -55,9 +55,30 @@ namespace Byn.Unity.Examples
         public RawImage _DebugTarget = null;
 
         /// <summary>
+        /// Headset rotational coordinates in degrees 0-360
+        /// </summary>
+        public Text _HeadsetRotation  = null;
+
+        /// <summary>
+        /// Headset rotational coordinates in degrees 0-360
+        /// </summary>
+        private int _RotationValue = 0;
+
+        /// <summary>
+        /// Previous Headset rotational coordinates in degrees 0-360
+        /// </summary>
+        private int _PrevRotationValue = 0;
+
+
+        /// <summary>
+        /// Incoming messages from peer containing headset coordinates 
+        /// </summary>
+        public MessageList _MessageList = null;
+
+        /// <summary>
         /// Name used to access it later via MediaConfig
         /// </summary>
-        public string _DeviceName = "VirtualCamera1";
+        public string _DeviceName = "VirtualCamera";
 
         /// <summary>
         /// FPS the virtual device is suppose to have.
@@ -70,11 +91,11 @@ namespace Byn.Unity.Examples
         /// <summary>
         /// Width the output is suppose to have
         /// </summary>
-        public int _Width = 1280;
+        public int _Width = 1920;
         /// <summary>
         /// Height the output is suppose to have
         /// </summary>
-        public int _Height = 720;
+        public int _Height = 2160;
 
         /// <summary>
         /// Device name used by this instance.
@@ -92,6 +113,8 @@ namespace Byn.Unity.Examples
         /// If unity supports it on the specific GfxDevice then it will be set to true. 
         /// </summary>
         private static bool mUseAsyncReadback = false;
+
+        private int counter = -965; 
 
 
         private void Awake()
@@ -289,6 +312,31 @@ namespace Byn.Unity.Examples
                     }
                 }
             }
+
+            /*
+            if (int.TryParse(_HeadsetRotation.text.ToString(), out _RotationValue))
+            {
+                if (_RotationValue >= 0 && _RotationValue <= 360 )
+                {
+                    if(_RotationValue >= -90 && _RotationValue< 0)
+                    {
+                        _Camera.transform.position = new Vector3((724), 0, 0);
+                    }
+                    if (_RotationValue >= 0 && _RotationValue < 90)
+                    {
+                        _Camera.transform.position = new Vector3((-241), 0, 0);
+                    }
+                    if (_RotationValue >= 90 && _RotationValue <= 180)
+                    {
+                        _Camera.transform.position = new Vector3((-724), 0, 0);
+                    }
+                    if (_RotationValue <= -90 && _RotationValue >= 180)
+                    {
+                        _Camera.transform.position = new Vector3((242), 0, 0);
+                    }
+                }
+            }
+            */ 
         }
 
     }

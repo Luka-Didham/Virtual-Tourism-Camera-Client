@@ -22,7 +22,7 @@ public class MessageList : MonoBehaviour
     /// </summary>
     public GameObject uEntryPrefab;
 
-
+    public InputField _input; 
 
     /// <summary>
     /// Reference to the own rect transform
@@ -63,6 +63,7 @@ public class MessageList : MonoBehaviour
         GameObject ngp = Instantiate(uEntryPrefab);
         Text t = ngp.GetComponentInChildren<Text>();
         t.text = text;
+        _input.text = text; 
 
         RectTransform transform = ngp.GetComponent<RectTransform>();
         transform.SetParent(mOwnTransform, false);
